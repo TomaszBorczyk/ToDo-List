@@ -1,58 +1,103 @@
 
 body{
   height: 100vh;
+  font-family: 'Lato', sans-serif;
 }
 
+.container-fluid{
+  margin: 0 auto;
+  padding: 0px;
+  overflow: hidden;
 
-.main{
-  height: 100vh;
-  background: #544c59;
-  border: 5px solid #211129;
-  margin: 0 20%;
-  border-radius: 5px;
+  .main{
+    height: 100vh;
+    background: #443c4d;
+    border: 5px solid #211129;
+    border-radius: 5px;
 
-  .menu{
-    margin: 0 auto;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    .menu{
+      margin: 0 auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      color: #fff;
 
-    .clock{
-    }
-    .task-meter{
-    }
-
-    .task-creator{
-      margin-left: 5%;
-      margin-right: 5%;
-      border-radius: 5px;
-      border: 1px solid #cccccc;
-
-      .task-text{
-        background: #574b65;
-        padding: 10px;
-        color: #fff;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+      .info{
+        padding-bottom: 10px;
+        .info-inside{
+          .fa-clock-o{
+            padding-right: 5px;
+            padding-top: 4px;
+          }
+          .clock-value{
+            padding-right: 30px;
+          }
+            margin-left: 10px;
+            @mixin status($color) {
+              border: 3px solid $color;
+              border-radius: 5px;
+              padding: 0.4em;
+              color: $color;
+            }
+            .finished{
+              @include status(#0ed073);
+              margin-right: 5px;
+            }
+            .unfinished{
+              @include status(#c32020);
+            }
+        }
       }
 
-      .task-input{
-        padding-left: 10px;
-      }
+      .task-creator{
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
 
-      .button-add{
-        background: #22a16b;
-        padding: 10px;
-        color: #fff;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        .task-text{
+          background: #574b65;
+          padding: 10px;
+          color: #fff;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+
+        .task-input{
+          padding-left: 10px;
+        }
+
+        .button-add{
+          padding: 10px;
+          color: #fff;
+          cursor: pointer;
+        }
       }
     }
+
+    .tasks{
+      color: #fff;
+      .task-list{
+        list-style-type: none;
+        font-family: 'Lato', sans-serif;
+        li{
+          border-bottom: 2px solid #26ebff;
+          margin-right: 50px;
+          div.row{
+            div.buttons-div{
+              button.btn-fin{
+                margin-right: 10px;
+              }
+              button.btn-del{
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
   }
-
-  .tasks{
-    background: #ddd;
-  }
-
 }
 
 

@@ -1,37 +1,68 @@
 body {
-  height: 100vh; }
-
-.main {
   height: 100vh;
-  background: #544c59;
-  border: 5px solid #211129;
-  margin: 0 20%;
-  border-radius: 5px; }
-  .main .menu {
-    margin: 0 auto;
-    padding-bottom: 20px;
-    padding-top: 20px; }
-    .main .menu .task-creator {
-      margin-left: 5%;
-      margin-right: 5%;
-      border-radius: 5px;
-      border: 1px solid #cccccc; }
-      .main .menu .task-creator .task-text {
-        background: #574b65;
-        padding: 10px;
-        color: #fff;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px; }
-      .main .menu .task-creator .task-input {
-        padding-left: 10px; }
-      .main .menu .task-creator .button-add {
-        background: #22a16b;
-        padding: 10px;
-        color: #fff;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px; }
-  .main .tasks {
-    background: #ddd; }
+  font-family: 'Lato', sans-serif; }
+
+.container-fluid {
+  margin: 0 auto;
+  padding: 0px;
+  overflow: hidden; }
+  .container-fluid .main {
+    height: 100vh;
+    background: #443c4d;
+    border: 5px solid #211129;
+    border-radius: 5px; }
+    .container-fluid .main .menu {
+      margin: 0 auto;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      color: #fff; }
+      .container-fluid .main .menu .info {
+        padding-bottom: 10px; }
+        .container-fluid .main .menu .info .info-inside {
+          margin-left: 10px; }
+          .container-fluid .main .menu .info .info-inside .fa-clock-o {
+            padding-right: 5px;
+            padding-top: 4px; }
+          .container-fluid .main .menu .info .info-inside .clock-value {
+            padding-right: 30px; }
+          .container-fluid .main .menu .info .info-inside .finished {
+            border: 3px solid #0ed073;
+            border-radius: 5px;
+            padding: 0.4em;
+            color: #0ed073;
+            margin-right: 5px; }
+          .container-fluid .main .menu .info .info-inside .unfinished {
+            border: 3px solid #c32020;
+            border-radius: 5px;
+            padding: 0.4em;
+            color: #c32020; }
+      .container-fluid .main .menu .task-creator {
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 5px;
+        border: 1px solid #cccccc; }
+        .container-fluid .main .menu .task-creator .task-text {
+          background: #574b65;
+          padding: 10px;
+          color: #fff;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px; }
+        .container-fluid .main .menu .task-creator .task-input {
+          padding-left: 10px; }
+        .container-fluid .main .menu .task-creator .button-add {
+          padding: 10px;
+          color: #fff;
+          cursor: pointer; }
+    .container-fluid .main .tasks {
+      color: #fff; }
+      .container-fluid .main .tasks .task-list {
+        list-style-type: none;
+        font-family: 'Lato', sans-serif; }
+        .container-fluid .main .tasks .task-list li {
+          border-bottom: 2px solid #26ebff;
+          margin-right: 50px; }
+          .container-fluid .main .tasks .task-list li div.row div.buttons-div button.btn-fin {
+            margin-right: 10px; }
 
 @media (max-width: 768px) {
   body .main {
